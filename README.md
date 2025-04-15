@@ -2,7 +2,9 @@
 A peaceful and calm Typora green theme ~  
 
 # Overview
-![](./assets/overview.png)
+![](./assets/overview_0.png)
+
+![](./assets/overview_1.png)
 
 # Introduction
 WhisperEden 是一个融合了宁静与自然之美的主题，仿佛将你带入一片轻声细语的伊甸园。背景色 #C7EDCC 和 #B9E6C0 的柔和浅绿色，如同初春的嫩叶，清新而温暖，营造出一种平和与舒适的氛围。在这里，你可以远离喧嚣，沉浸在自然的美好中，感受每一刻的宁静与灵感。无论是创作、阅读，还是简单地放松身心，WhisperEden 都为你提供了一个完美的避风港

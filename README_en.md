@@ -2,7 +2,9 @@
 A peaceful and calm Typora green theme ~
 
 # Overview
-![](./assets/overview.png)
+![](./assets/overview_0.png)
+
+![](./assets/overview_1.png)
 
 # Introduction
 WhisperEden is a theme that blends tranquility and the beauty of nature, as if transporting you to a whispering Eden. The soft light green background colors #C7EDCC and #B9E6C0 resemble the tender leaves of early spring, fresh and warm, creating a peaceful and comfortable atmosphere. Here, you can escape the noise, immerse yourself in the beauty of nature, and experience moments of calm and inspiration. Whether you're creating, reading, or simply relaxing, WhisperEden provides the perfect sanctuary.  
