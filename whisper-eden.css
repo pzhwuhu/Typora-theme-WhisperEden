@@ -34,6 +34,10 @@
     /*  一级标题字体颜色 */
     --h2-bg-color: #8bda99;
     /* 二级标题背景颜色 */
+    --quote-font-color: #2D6B4F;
+    /* 引用块字体颜色 */
+    --hr-color: #87B299;
+    /* 分割线颜色 */
 }
 
 /* ===== 字体设置 ===== */
@@ -191,7 +195,8 @@ table {
 blockquote {
     border-left: 4px solid var(--blockquote-border-color);
     padding: 0 15px;
-    color: #777777;
+    color: var(--quote-font-color);
+    font-style: italic;
 }
 
 ul,
@@ -283,10 +288,10 @@ tt {
 
 /* ===== 其他样式 ===== */
 hr {
-    height: 2px;
+    height: 1px;
     padding: 0;
     margin: 16px 0;
-    background-color: #181212;
+    background-color: var(--hr-color);
     border: 0 none;
     overflow: hidden;
     box-sizing: content-box;
