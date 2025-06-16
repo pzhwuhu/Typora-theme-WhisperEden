@@ -138,31 +138,18 @@ h1 {
 
 h2 {
     display: inline-block;
-    /* 让高亮块包裹标题 */
+    /* 让高亮块仅包裹标题 */
     font-size: 1.5em;
     line-height: 1.2;
+    background-color: var(--h2-bg-color);
+    /* 直接应用背景色 */
+    padding: 3px 12px;
+    /* 使用内边距制造呼吸感，可自行调整 */
+    border-radius: 5px;
+    /* 应用圆角 */
 }
 
-h2::before {
-    content: "";
-    /* 伪元素内容 */
-    position: absolute;
-    /* 绝对定位 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* 覆盖整个标题 */
-    height: 100%;
-    /* 覆盖整个标题 */
-    background: var(--h2-bg-color);
-    /* 高亮颜色 */
-    z-index: -1;
-    /* 将伪元素置于标题下方 */
-    border-radius: 5px;
-    /* 圆角效果 */
-    transform: scale(1.6, 1.3);
-    /* 稍微放大 */
-}
+/* 删除了原有的 h2::before 伪元素规则，因为它在导出PDF时导致问题 */
 
 h3 {
     font-size: 1.5em;
@@ -272,17 +259,17 @@ tt {
 
 /* ===== 任务列表样式 ===== */
 .task-list-item p {
-    font-size: 32px !important;
+    font-size: 1em !important;
     color: var(--text-color);
 }
 
 .task-list-item input[type=checkbox] {
     display: inline-block !important;
-    zoom: 140%;
+    zoom: 120%;
 }
 
 .md-task-list-item>input {
-    margin-left: -0.8em !important;
+    margin-left: -1.4em !important;
 }
 
 
@@ -311,4 +298,29 @@ mark {
 /* 选中块 */
 ::selection {
     background-color: var(--selection-bg-color);
+}
+
+/* ===== 导出PDF样式 ===== */
+@media print {
+    @page {
+        /* 设置打印页边距 */
+        margin: 16mm 0mm 12mm 0mm;
+    }
+
+    html,
+    body {
+        /* 在打印时确保背景色为主题色 */
+        background-color: var(--background-color) !important;
+        /* 使用-webkit-print-color-adjust来强制打印背景色 */
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* 重置 #write 容器的内外边距，让它在 @page 的边距内自然流动 */
+    #write {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+        width: auto !important;
+    }
 }
